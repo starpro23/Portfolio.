@@ -1,0 +1,381 @@
+@media (max-width: 720px) {
+    *{
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    html{
+        filter: brightness(95%);
+        
+    }
+    
+    
+    
+    /*style ya page1 only*/
+    .page1{
+        width: 100%;
+        height: 550px;
+        background: #0a192f;
+        overflow: hidden;
+    }
+    
+    .navbar{
+        width: 100%;
+        height: 100px;
+        position: fixed;
+        background: #0a192f;
+        z-index: 5;
+    }
+    
+    .navbar ul{
+        display: flex;
+        font-family: arial;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    
+    .navbar ul li{
+        list-style: none;
+        margin: 5px;
+    }
+    
+    .navbar ul li a{
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        font-weight: 500;
+        transition: 0.3s;
+        font-size: 12px;
+    }
+    
+    .navbar ul li a:hover{
+        color: #0a192f;
+        background-color: white;
+        border-radius: 32px 64px;
+    }
+    
+    /*hapa ni hiyo drop down ya about me*/
+    .sub-menu-1{
+        display: none;
+    }
+    
+    .navbar ul li:hover .sub-menu-1{
+        display: block;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: -15px;
+        background: #01193dd8;
+        border-radius: 5px;
+        
+    }
+    .navbar ul li:hover .sub-menu-1 ul{
+        display: block;
+        margin: 10px;
+        
+    }
+    
+    .navbar ul li:hover .sub-menu-1 ul li{
+        width: 100px;
+        padding: 10px;
+        border-bottom: 3px dotted rgb(255, 0, 0);
+        background: transparent;
+        text-align: center;
+    }
+    
+    .navbar ul li:hover .sub-menu-1 ul li:last-child{
+        border-bottom: none;
+    }
+    
+    /* hiyo picha iko page 1*/
+    
+    .logo{
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .logo img{
+        height: 100px;
+        margin: 150px 0 0 70px;
+    }
+        
+    /* hapa ni hiyo logo iko kwa background of page 1*/
+    .logo-bg{
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .logo-bg img{
+        height: 300px;
+        margin: 300px 0 0 50px;
+        opacity: 20%; 
+    }
+    .image{
+        position: absolute;
+        height: 200px;
+        z-index: 3;
+    }
+    
+    .image img{
+        height: 230px;
+        border-radius: 25px;
+        margin: 190px 0 0 233px;
+        border: 5px solid rgb(255, 3, 3); 
+    }
+    
+    /* content ya page 1 hello etc... plus contact me button*/
+    
+    .cont{
+        position: absolute;
+        font-family: Arial;
+        width: 200px;
+        color: white;
+        margin: 250px 0 0 20px;
+        justify-items: center;
+        z-index: 2;
+    }
+    
+    /* hii nimeitumia kuchange the name to colour red without affecting the whole statement*/
+    span{
+        color: #ff0000;
+    }
+    .cont h1{
+        font-size: 30px;
+        padding: 10px;
+    }
+    
+    .cont p{
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    button{
+        color: #0a192f;
+        padding: 10px;
+        border-radius: 15px;
+        border: none;
+        transition: 0.3ms;
+        margin: 10px;
+        align-items: center;
+    }
+    
+    button:hover{
+        color: white;
+        background: #0a192f;
+        border: 2px solid white;
+        cursor: pointer;
+    }
+    
+    /* hii ni hiyo icon ya kupiga simu ndani ya contact me button*/
+    .fa-solid{
+        width: 30px;
+        padding-left: 5px;
+    }
+    
+    
+    /* style ya page 2*/
+    .page2{
+        height: 700px;
+        background-image: url(bg1.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: arial;
+        margin-top: 10px;  
+        overflow: hidden;
+    }
+    
+    /* hapa nimestyle the data yenye inaonyesha complete projects, cleent satisfaction, years of experience only*/
+    .work-data{
+        display: block;
+        position: absolute;
+        margin: 10px 0 0 150px;
+    }
+    
+    .data{
+        height: 100px;
+        width: 100px;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .data h1{
+        color: white;
+        font-size: 30px;
+    }
+    
+    .data p{
+        padding: 5px;
+        color: white;
+        font-size: 20px;
+    }
+    
+    /* nimestyle hiyo story ya about me */
+    .about{
+        width: 400px;
+        font-family: arial;
+        justify-items: center;
+    }
+    .about h1{
+        color: white;
+        font-size: 30px;
+        padding-top: 10px;
+    }
+    
+    .about p{
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    
+    }
+    
+    .page3{
+        margin-top: 10px;
+        height: 1100px;
+        background: #0a192f;
+    
+    }
+    .page3 h2{
+        font-family: arial;
+        font-size: 50px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding-top: 30px;
+    }
+    
+    .contt{
+        display: block;
+        
+    }
+    
+    .contcard-1{
+        background: rgb(255, 251, 251);
+        width: 350px;
+        height: 200px;
+        justify-items: center;
+        align-content: center;
+        border-radius: 15px;
+        margin: 30px;
+        font-family: arial;
+        transition: 0.3ms ease-in-out;
+    }
+    
+    .contcard-1:hover{
+        scale: 101%;
+        border: 2px solid rgb(255, 0, 0);
+    }
+    
+    .contcard-1 h2{
+        font-size: 20px;
+        color: #0a192f;
+        padding-bottom: 10px;
+    }
+    
+    .contcard-1 p{
+        font-size: 15px;
+        color: #0a192f;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    footer {
+        background-color: #000;
+        padding: 10px 20px;
+        font-family: arial;
+    }
+    
+    .footer-container {
+        display: block;
+    }
+    
+    .newsletter {
+        display: block;
+        width: 300px;
+    }
+    
+    .newsletter h2 {
+        font-size: 24px;
+    }
+    
+    
+    .newsletter form {
+        display: block;
+        gap: 10px;
+    }
+    
+    .newsletter input {
+        padding: 10px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        flex: 1;
+    }
+    
+    .newsletter button {
+        background-color: white;
+        color: black;
+        border: none;
+        
+        cursor: pointer;
+        font-size: 14px;
+    }
+    
+    .newsletter button:hover {
+        background-color: gray;
+    }
+
+    .footer-links {
+        display: block;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex: 2;
+        min-width: 600px;
+    }
+    
+    .social-icons {
+        margin: 10px 0 10px 50px;
+        
+    }
+    
+    .social-icons a {
+        color: white;
+        font-size: 18px;
+        margin-right: 50px;
+    }
+    
+    
+    
+    .column {
+        width: 400px;
+        margin-bottom: 20px;
+    }
+    
+    .column ul {
+        list-style: none;
+        padding: 30px;
+        display: flex;
+    }
+    
+    .column ul li {
+        margin-bottom: 5px; 
+    }
+    
+    .column ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+        margin: 5px;
+    }
+    
+    .column ul li a:hover {
+        opacity: 1;
+        text-decoration: underline;
+    }
+    
+    footer p{
+        color: white;
+        text-align: center;
+    }
+    
+    
+}
