@@ -8,8 +8,8 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-const ADMIN_EMAIL = 'starpro@gmail.com';
-const ADMIN_PASSWORD = '0790441237';
+const ADMIN_EMAIL = '23starpro.32@gmail.com';
+const ADMIN_PASSWORD = '4868';
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {

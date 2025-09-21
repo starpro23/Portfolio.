@@ -8,6 +8,8 @@ import { useAuth } from './contexts/AuthContext';
 const App: React.FC = () => {
   const [route, setRoute] = useState(window.location.hash);
   const { isAuthenticated } = useAuth();
+  
+  const owner: string = import.meta.env.VITE_PORTFOLIO_OWNER;
 
   useEffect(() => {
     const handleHashChange = () => {
