@@ -2,6 +2,7 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useAppContext } from '../contexts/ProjectsContext';
+import { getProjects } from "../api"; // ✅ connect to backend
 
 const Projects: React.FC = () => {
   const sectionRef = useScrollAnimation<HTMLElement>();
