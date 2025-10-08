@@ -9,7 +9,7 @@ api = Blueprint('api', __name__)
 def uploaded_file(filename):
     return send_from_directory(current_app.config['UPLOAD_FOLDER'], filename)
 
-# Updating the Admin profile picture.
+# Update Admin profile picture
 @api.route('/admin/profile/upload', methods=['POST'])
 def upload_profile_picture():
     admin = Admin.query.first()
@@ -23,9 +23,12 @@ def upload_profile_picture():
 
     admin.profile_picture = filename
     db.session.commit()
-    return jsonify({"message": "profile picture updated successfully", "image_url": admin.profile_picture}), 200
+    return jsonify({
+        "message": "Profile picture updated successfully",
+        "image_url": f"/upload/{filename}"
+    }), 200
 
-# Uploading a new project.
+# Add a new project
 @api.route('/projects/upload', methods=['POST'])
 def add_project():
     data = request.form
@@ -38,20 +41,18 @@ def add_project():
         github_URL=data.get('github_URL')
     )
 
-    # Condition to save a thumbnail if provided.
     if image:
         filename = secure_filename(image.filename)
         path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
         image.save(path)
-        Project.thumbnail_url = f"/uploads/{filename}"
+        project.image_thumbnail = f"/upload/{filename}"
 
-    db.session.add(Project)
+    db.session.add(project)
     db.session.commit()
 
     return jsonify({"message": "Project added successfully"}), 201
 
-
-# Fetch all projects for display.
+# Fetch all projects
 @api.route('/projects', methods=['GET'])
 def get_projects():
     projects = Project.query.order_by(Project.created_at.desc()).all()
@@ -62,10 +63,6 @@ def get_projects():
             'description': p.description,
             'live_URL': p.live_URL,
             'github_URL': p.github_URL,
-            'thumbnail_url': p.thumbnail_url
+            'image_thumbnail': p.image_thumbnail
         } for p in projects
     ])
-
-
-
-
